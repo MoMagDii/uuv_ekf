@@ -1,0 +1,41 @@
+### Paramteres used by the controller node ###
+ekf_node:
+  ros__parameters:
+    ######################################################
+    ## EKF Design Paramteres
+    uuv_name: "rexrov"
+    world_frame: "world"
+    ekf_state_frame: "odom"
+    base_link_frame: "rexrov/base_link"
+    ekf_state_frequency: 25
+    ## ***********************************************************************
+    ## UUV  Model Paramteres
+    mass: 1862.87
+    volume: 1.83826
+    r_cog: [0.0, 0.0, 0.0]
+    r_cob: [0.0, 0.0, -0.3]
+    Ma: [700.0, 1200.0, 3500.0, 500.0, 800.3, 200.0]
+    Dlinear:  [-70.0, -70.0, -700.0, -200.0, -300.0, -100.0]
+    Dquad: [-700.0, -900.0, -1800.0, -600.0, -700.0, -500.0]
+    Ib: [525.39, 794.2, 691.23, 1.44, 33.41, 2.6]
+    controller_topic: "/rexrov/thruster_manager/input_stamped"
+    ## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ## Sensors Paramteres
+    dt: 0.05
+    R: [0.01, 0.01, 0.01, 0.01, 0.01, 0.01]
+    Q: [10.0, 1.0, 10.0, 2.5, 2.5, 2.5, 0.60, 0.60, 0.60, 0.60, 0.60, 0.60]
+    dvl_topic: "/rexrov/dvl"
+    imu_topic: "/rexrov/imu"
+    pressure_topic: "/rexrov/pressure"
+    ## ===========================================================
+
+
+
+
+
+
+    
+    
+    
+
+    
